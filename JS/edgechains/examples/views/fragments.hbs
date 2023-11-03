@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+{{#messageItem}}
+<li class="clearfix">
+    <div class="card">
+        <div class="card-body" data-message="{{this.item.message}}">
+            {{this.item.message}}
+        </div>
+    </div>
+</li>
+{{/messageItem}}
+
+{{#chatItem}}
+<a href="/index" class="list-group-item list-group-item-action">
+    {{this.chat.heading}}
+</a>
+{{/chatItem}}
+</html>
