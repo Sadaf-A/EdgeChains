@@ -4,8 +4,9 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.setBaseViewsDir('views');
-  app.setViewEngine('hbs');
+  app.set('views', __dirname);
+  app.set('view engine', 'hbs');
+
   await app.listen(8080);
 }
 bootstrap();
